@@ -1,0 +1,690 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CS/Coffee page.css">
+    <link rel="stylesheet" type="text/html" href="login.html">
+    <link rel="stylesheet" type="text/html" href="cart.html">
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title> SRI VASAVI COFFEE FACTORY </title>
+
+</head>
+
+<body>
+    
+    <header class="header">
+        <a href="#home" class="logo">
+            <img src="images/logo.jpg" alt="" height="45px" width="40px">
+        </a>
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Product">Product</a>
+            <a href="#Menu">Menu</a>
+            <a href="#Team">Team</a>
+            <a href="#About">About</a>
+            <a href="#Contact us">Contact us</a>
+            
+        </nav>
+        
+        <div class="icons">
+            <div class="fa-solid fa-user"><a href="login.html"></a></div>
+            <div class="fa-solid fa-search" id="search-form"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"><sup>0</sup></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+
+        </div>
+        
+
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Search Here">
+            <label for="search-box" class="fas fa-search"></label>
+            <div class="search-results">
+                <!-- Search results will be displayed here -->
+            </div>
+        </div>
+        
+        
+        <div class="cart-iteams-container">
+            <div class="cart">
+                <div class="cart-header">
+                  <i class="fas fa-arrow"></i>
+                  <h2>Your Cart</h2>
+                </div>
+                <div class="cart-body"></div>
+                <div class="cart-footer">
+                    <div class="cart-total">
+                        Total: $<span id="total-value">0.00</span>
+                    </div>
+                  <button class="cart-clear">Clear Cart</button>
+                  <button class="checkout" onclick="storeCartItems()"><a href="payment.html">CHECK OUT</a></button>
+
+                </div>
+            </div>
+
+        </div>
+		
+    </header>
+    
+
+    <section class="Home" id="Home">
+        <div class="all">
+            <img src="images/alliteams.jpg" alt="">
+        </div>
+        
+        <div class="content">
+               
+            <h3>SRI VASAVI COFFEE FACTORY</h3>
+            <P >
+                Sometimes, you just want the perfect cup of black coffee, which is why the Concordia team<br> collaborated with customers to innovate and engineer the ideal equipment for the job, the Concordia Ascent Touch
+            </P>
+            <a href="#" class="btn" >KNOWN HERE</a>
+            <a href="login.html" class="btn" >LOGIN</a>
+              
+        </div>
+
+
+    </section>
+        <br>
+    <section class="Product" id="Product">
+        <h1 class="heading"> <span>Our Products</span></h1>
+        <div class="box-container">
+            <div class="box">
+             
+                <div class="image">
+                    <img src="images/th2.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Nescafe Classic</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$120.00</div>
+                    <span>$250.00</span>
+                </div>
+        
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="images/th3.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>KKALDI PRIME</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$320.00</div>
+                    <span>$550.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+               
+                <div class="image">
+                    <img src="images/th4.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>GOLD BLEND</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$430.00</div>
+                    <span>$750.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"><span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="images/th5.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>DECAF ORGANIC</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$540.00</div>
+                    <span>$650.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="images/th6.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>BLACK COFFEE</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$400.00</div>
+                    <span>$650.00</span>
+                </div>
+                <div class="icons">
+                     
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart()"> <span>Add To Cart</span></a>
+
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="images/th7.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>COLOMBIA</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$750.00</div>
+                    <span>$800.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="images/th8.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>INSTANT PACKS</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$680.00</div>
+                    <span>$800.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="images/th9.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>GOLD COFFEE</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$715.00</div>
+                    <span>$950.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="images/th10.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>LADS ARABICA</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$850.00</div>
+                    <span>$999.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+               
+                <div class="image">
+                    <img src="images/images.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>SOUTH INDIAN</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$370.00</div>
+                    <span>$640.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+                
+                <div class="image">
+                    <img src="images/th11.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>CHIPEMBIRE</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$455.00</div>
+                    <span>$599.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+
+            <div class="box">
+               
+                <div class="image">
+                    <img src="images/th12.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3>NESCAFE GOLD</h3>
+                    <div class="starts">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">$620.00</div>
+                    <span>$799.00</span>
+                </div>
+                <div class="icons">
+                    <a href="" class="fas fa-shopping-cart" id="addtocart" onclick="addToCart(event)"> <span>Add To Cart</span></a>
+                    <a href="#" class="fas fa-heart"><span>Wish List</span></a>
+                   
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="Menu" id="Menu">
+        <h1 class="heading"> <span>Our Menu</span></h1>
+       
+        <div class="box-container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="images/nijh.jpg" alt="">
+                </div>
+                <div class="Details">
+                    <h3>ALLAM TEA<br><span>Ginger Tea</span></h3>
+                    <h4>Product Details</h4>
+                    <p>Allam tea good for health it keeps mind in fresh and calm way its an energy</p>
+                    <h4>Size</h4>
+                    <ul class="size">
+                        <li><button class="size-btn" data-price="25.99">Small</button></li>
+                        <li><button class="size-btn" data-price="51.98">Medium</button></li>
+                        <li><button class="size-btn" data-price="77.97">Large</button></li>
+                        <li><button class="size-btn" data-price="103.96">Extra large</button></li>
+                    </ul>
+                    <div class="group">
+                        <h2 class="product-price"><sup>$</sup>25<small>.99</small></h2>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="images/te1.jpeg" alt="">
+                </div>
+                <div class="Details">
+                    <h3>ELLACHI TEA<br><span>ELLACHI Tea</span></h3>
+                    <h4>Product Details</h4>
+                    <p>ELLACHI tea good for health it keeps mind in fresh and calm way its an energy</p>
+                    <h4>Size</h4>
+                    <ul class="size">
+                        <li><button class="size-btn" data-price="20.99">Small</button></li>
+                        <li><button class="size-btn" data-price="41.98">Medium</button></li>
+                        <li><button class="size-btn" data-price="62.97">Large</button></li>
+                        <li><button class="size-btn" data-price="83.96">Extra large</button></li>
+                    </ul>
+                    <div class="group">
+                        <h2 class="product-price"><sup>$</sup>20<small>.99</small></h2>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="images/te2.jpeg" alt="">
+                </div>
+                <div class="Details">
+                    <h3>BLACK TEA<br><span>BLACK Tea</span></h3>
+                    <h4>Product Details</h4>
+                    <p>BLACK tea good for health it keeps mind in fresh and calm way its an energy</p>
+                    <h4>Size</h4>
+                    <ul class="size">
+                        <li><button class="size-btn" data-price="15.99">Small</button></li>
+                        <li><button class="size-btn" data-price="31.98">Medium</button></li>
+                        <li><button class="size-btn" data-price="47.97">Large</button></li>
+                        <li><button class="size-btn" data-price="63.96">Extra large</button></li>
+                    </ul>
+                    <div class="group">
+                        <h2 class="product-price"><sup>$</sup>15<small>.99</small></h2>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="images/te3.jpeg" alt="">
+                </div>
+                <div class="Details">
+                    <h3>GREEN TEA<br><span>GREEN Tea</span></h3>
+                    <h4>Product Details</h4>
+                    <p>GREEN tea good for health it keeps mind in fresh and calm way its an energy</p>
+                    <h4>Size</h4>
+                    <ul class="size">
+                        <li><button class="size-btn" data-price="35.99">Small</button></li>
+                        <li><button class="size-btn" data-price="151.98">Medium</button></li>
+                        <li><button class="size-btn" data-price="227.97">Large</button></li>
+                        <li><button class="size-btn" data-price="303.96">Extra large</button></li>
+                    </ul>
+                    <div class="group">
+                        <h2 class="product-price"><sup>$</sup>75<small>.99</small></h2>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="images/te4.jpeg" alt="">
+                </div>
+                <div class="Details">
+                    <h3>LEMON TEA<br><span>LEMON Tea</span></h3>
+                    <h4>Product Details</h4>
+                    <p>LEMON tea good for health it keeps mind in fresh and calm way its an energy</p>
+                    <h4>Size</h4>
+                    <ul class="size">
+                        <li><button class="size-btn" data-price="30.99">Small</button></li>
+                        <li><button class="size-btn" data-price="61.98">Medium</button></li>
+                        <li><button class="size-btn" data-price="92.97">Large</button></li>
+                        <li><button class="size-btn" data-price="123.96">Extra large</button></li>
+                    </ul>
+                    <div class="group">
+                        <h2 class="product-price"><sup>$</sup>30<small>.99</small></h2>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="images/te5.jpeg" alt="">
+                </div>
+                <div class="Details">
+                    <h3>SONTTI TEA<br><span>SONTTI Tea</span></h3>
+                    <h4>Product Details</h4>
+                    <p>SONTTI tea good for health it keeps mind in fresh and calm way its an energy</p>
+                    <h4>Size</h4>
+                    <ul class="size">
+                        <li><button class="size-btn" data-price="18.99">Small</button></li>
+                        <li><button class="size-btn" data-price="37.98">Medium</button></li>
+                        <li><button class="size-btn" data-price="56.97">Large</button></li>
+                        <li><button class="size-btn" data-price="75.96">Extra large</button></li>
+                    </ul>
+                    <div class="group">
+                        <h2 class="product-price"><sup>$</sup>18<small>.99</small></h2>
+                        <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="images/te6.jpeg" alt="">
+                </div>
+                <div class="Details">
+                    <h3>BELLAM TEA<br><span>BELLAM Tea</span></h3>
+                    <h4>Product Details</h4>
+                    <p>BELLAM tea good for health it keeps mind in fresh and calm way its an energy</p>
+                    <h4>Size</h4>
+                    <ul class="size">
+                        <li><button class="size-btn" data-price="40.99">Small</button></li>
+                        <li><button class="size-btn" data-price="81.98">Medium</button></li>
+                        <li><button class="size-btn" data-price="122.97">Large</button></li>
+                        <li><button class="size-btn" data-price="163.96">Extra large</button></li>
+                    </ul>
+                    <div class="group">
+                        <h2 class="product-price"><sup>$</sup>40<small>.99</h2>
+                            <a href="#">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <Section class="Team" id="Team">
+
+        <h1 class="heading"><span>Team</span></h1>
+        <div class="teammenu">
+       
+            <div class="container">
+                
+                <div class="teamcard">
+                    <img src="images/sudheer.jpg" alt="Nagababu">
+                
+                    <div class="contentBx">
+                        <h1>Sudheer</h1>
+                        <p><span>Manager</span><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestias quasnatus quaerat ratione deleniti culpa fugiat error nostrum cupiditate! Odit sed deleniti eaque nequedistinctioprovident.Temporibus, animi tempora!</p>
+                    </div>
+                   
+                </div>
+            
+            </div>
+
+
+            <div class="container">
+                <div class="teamcard">
+                    <img src="images/sai.jpg" alt="Nagababu">
+                
+                    <div class="contentBx">
+                        <h1>Sai</h1>
+                        <p><span>Branch Head</span><br> ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestias quasnatus quaerat ratione deleniti culpa fugiat error nostrum cupiditate! Odit sed deleniti eaque nequedistinctioprovident.Temporibus, animi tempora!</p>
+                    </div>
+                   
+                </div>
+            </div>
+       
+       
+            <div class="container">
+                <div class="teamcard">
+                    <img src="images/sanjay.jpg" alt="Nagababu">
+                
+                    <div class="contentBx">
+                        <h1>Sanjay</h1>
+                        <p><span>Waiter</span><br> ipsum dolor sit amet consectetur adipisicing elit. Aliquam molestias quasnatus quaerat ratione deleniti culpa fugiat error nostrum cupiditate! Odit sed deleniti eaque nequedistinctioprovident.Temporibus, animi tempora!</p>
+                    </div>
+                   
+                </div>
+            </div>
+       
+       
+        </div>
+    </Section>
+
+
+    <section class="About" id="About">
+        <h1 class="heading"> <span>About</span></h1>
+        <div class="rows">
+            <div class="img-section">
+                <img src="images/coffeeimage.jpg">
+            </div>
+            <div class="aboutcontent">
+                <h1>Our Coffee</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet autem quia magnam labore fuga ipsum praesentium quaerat necessitatibus, iste natus vitae, dolores totam alias, expedita eligendi possimus quas ducimus. Laboriosam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas similique error non. Dolore placeat unde numquam cumque repudiandae odit ratione quam, et quo, inventore, autem in? Mollitia, nisi quam? Quo!</p>
+                
+            </div>
+        </div>
+        
+        <div class="container">
+            
+            <div class="content">
+            <h1>Take Away</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto excepturi ipsam velit, eligendi earum nihil nemo voluptatibus. Beatae facilis velit alias, maiores ut molestiae nihil, recusandae, dolore dicta incidunt delectus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus officia molestias sunt magnam alias consectetur, assumenda perspiciatis quisquam nostrum soluta enim similique saepe perferendis magni aliquid vel asperiores. Voluptatem, aspernatur.</p>
+            <a href="#" class="btn" >learn more</a>
+            </div>
+            <div class="img1">
+                <img src="images/takeaway.jpg">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="Contact us" id="Contact us">
+        <h1 class="heading"> <span>Contact us</span></h1>
+        <div id="contact">
+            <div class="contact-container">
+                <div class="row">
+                    <div class="contact-left">
+                        <p><i class="fa-solid fa-address-card"></i>chennur bus stand near trunk road beside APGB Bank,kadapa,Andhra Pradesh,516001</p>
+                        <p><i class="fa fa-envelope" aria-hidden="true"></i> nagababu6359@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 9603912716</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=100017313903379&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></i></a>
+                            <a href="https://twitter.com/c_nagababu?t=SoqielaVj2hzZHU2Pt_m7Q&s=08"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com/mr_nagababu_3?igshid=MzNlNGNkZWQ4Mg=="><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/venkata-nagababu-a402ab233"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <label>first Name</label>
+                            <input type="text" name="Name" placeholder="Full Name" required>
+                            <input type="email"name="email" placeholder="Email Address" required>
+                            <input type="phone"name="phone" placeholder="phone Number" required>
+                            <textarea name="Message" rows="" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+
+
+    </section>
+   <script src="js/main.js">
+
+
+   </script>
+</body>
+
+</html>

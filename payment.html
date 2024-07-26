@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form - Sagar Developer</title>
+    <link rel="stylesheet" href="CS/payment.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Payment Form</h2>
+        <form id="paymentForm" action="" method="post">
+            <!--Account Information Start-->
+            <h4>Account</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="First Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Last Name Card" required class="name">
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="email" placeholder="Email Address" required class="name">
+                    <i class="fa fa-envelope icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Address" required class="name">
+                    <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="City" required class="name">
+                    <i class="fa fa-institution icon"></i>
+                </div>
+            </div>
+            <!--Account Information End-->
+
+
+            <!--DOB & Gender Start-->
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Date Of Birth</h4>
+                    <input type="text" placeholder="DD" required class="dob">
+                    <input type="text" placeholder="MM" required class="dob">
+                    <input type="text" placeholder="YYYY" required class="dob">
+                </div>
+                <div class="input_box">
+                    <h4>Gender</h4>
+                    <input type="radio" name="gender" class="radio" id="b1" checked>
+                    <label for="b1">Male</label>
+                    <input type="radio" name="gender" class="radio" id="b2">
+                    <label for="b2">Female</label>
+                </div>
+            </div>
+            <!--DOB & Gender End-->
+
+
+            <!--Payment Details Start-->
+            <!-- Payment Details Start -->
+            <div class="input_group">
+              
+                <div class="input_box">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="pay" class="radio" id="bc1" required>
+                    <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                    <input type="radio" name="pay" class="radio" id="bc2" required>
+                    <label for="bc2"><span><i class="fa-solid fa-qrcode"></i>QR Code</span></label>
+                    <input type="radio" name="pay" class="radio" id="bc3" required>
+                    <label for="bc3"><span><i class="fa fa-credit-card"></i>Debit Card</span></label>
+                    <input type="radio" name="pay" class="radio" id="bc4" required>
+                    <label for="bc4"><span><i class="fa fa-money"></i>UPI</span></label>
+                </div>
+            </div>
+
+            <div class="input_group">
+                <div class="input_box" id="debitCardFields" style="display: none;">
+                    <input type="tel" name="" class="name" placeholder="Debit Card Number" required>
+                    <input type="tel" name="" class="name" placeholder="Card CVC 632" required>
+                    <input type="number" placeholder="Exp Month" required class="name">
+                    <input type="number" placeholder="Exp Year" required class="name">
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+                
+            </div>
+
+            <div class="input_group">
+                <div class="input_box" id="QR Code" style="display: none;">
+                  <img src="images/qr.jpeg" class="qr" alt="">
+                  <i class="fa-solid fa-qrcode"></i>
+                </div>
+            </div>
+
+            <div class="input_group">
+                <div class="input_box" id="upiFields" style="display: none;">
+                    <input type="text" name="" class="name" placeholder="UPI ID" required>
+                    <i class="fa fa-money icon" aria-hidden="true"></i>
+                </div>
+            </div>
+            <!-- Payment Details End -->
+
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Card Number 1111-2222-3333-4444" required>
+                    <i class="fa fa-credit-card icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" name="" class="name" placeholder="Card CVC 632" required>
+                    <i class="fa fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <div class="input_box">
+                        <input type="number" placeholder="Exp Month" required class="name">
+                        <i class="fa fa-calendar icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="input_box">
+                    <input type="number" placeholder="Exp Year" required class="name">
+                    <i class="fa fa-calendar-o icon" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="input_group">
+                <h2>Total Amount</h2>
+                <div class="total-amount">
+                    <!-- Display the total amount here -->
+                    Total: $<span id="display-total"></span>
+                </div>
+            </div>
+          
+            <!--Payment Details End-->
+
+            <div class="input_group">
+                <button type="button" id="payNowBtn">PAY NOW</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="popup-container" id="popupContainer" style="display: none;">
+        <!-- Pop-up content will be added dynamically using JavaScript -->
+    </div>
+
+    <script src="js/payment.js">
+        // Function to display the payment success popup
+        function showPaymentSuccessPopup() {
+            var popupContainer = document.getElementById("popupContainer");
+
+            var popup = document.createElement("div");
+            popup.classList.add("popup");
+
+            var checkmark = document.createElement("div");
+            checkmark.classList.add("checkmark");
+            checkmark.innerHTML = "&#10004;"; // Checkmark symbol
+
+            var message = document.createElement("div");
+            message.classList.add("message");
+            message.textContent = "Payment Successful!";
+
+            // Append checkmark and message to the popup
+            popup.appendChild(checkmark);
+            popup.appendChild(message);
+
+            // Append popup to the popup container
+            popupContainer.appendChild(popup);
+
+            // Show the popup container
+            popupContainer.style.display = "flex";
+
+            // Close the popup after a certain duration (e.g., 3 seconds)
+            setTimeout(function() {
+                popupContainer.removeChild(popup);
+                popupContainer.style.display = "none";
+            }, 3000); // Adjust the duration as needed
+        }
+
+        // Function to validate the form before submitting
+        function validateForm() {
+            var isValid = true;
+            var requiredFields = document.querySelectorAll('input[required]');
+
+            requiredFields.forEach(function(field) {
+                if (!field.value.trim()) {
+                    isValid = false;
+                }
+            });
+
+            return isValid;
+        }
+
+        // Add event listener to the "PAY NOW" button
+        document.getElementById("payNowBtn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Check if the form is valid
+            if (validateForm()) {
+                // Simulate payment process (you can replace this with your actual payment process)
+                // Here, we just show the payment success popup
+              
+            } else {
+                alert("Please fill in all required fields.");
+                showPaymentSuccessPopup();
+            }
+        });
+    </script>
+</body>
+
+</html>
