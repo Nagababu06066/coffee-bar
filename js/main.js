@@ -343,3 +343,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.cart-clear').addEventListener('click', clearCart);
 });
+
+
+// Get the form element
+const form = document.getElementById('booking-form');
+
+// Add an event listener to the form's submit event
+form.addEventListener('submit', bookTable);
+
+// Define the bookTable function
+function bookTable(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Get the input values
+    const name = document.querySelector('input[name="Name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const phone = document.querySelector('input[name="phone"]').value;
+    const date = document.querySelector('input[name="date"]').value;
+    const time = document.querySelector('input[name="time"]').value;
+
+    // Validate the input values
+    if (name && email && phone && date && time) {
+        // Submit the booking request to the server or display a confirmation message
+        console.log('Booking request submitted:');
+        console.log(`Name: ${name}`);
+        console.log(`Email: ${email}`);
+        console.log(`Phone: ${phone}`);
+        console.log(`Date: ${date}`);
+        console.log(`Time: ${time}`);
+        alert('Booking request submitted successfully!');
+    } else {
+        console.error('Please fill in all required fields.');
+        alert('Please fill in all required fields.');
+    }
+}

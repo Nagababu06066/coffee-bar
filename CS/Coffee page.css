@@ -792,6 +792,55 @@ p{
     padding: 2rem 0;
     line-height: 1.8;
  }
+
+
+ 
+#booking-details {
+    margin-top: 20px;
+    width: 80%;
+}
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    
+}
+label{
+    margin-bottom: 10px;
+    
+}
+form input{
+    width: 100%;
+    border: 0;
+    outline: 0cm;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0px;
+    color: #fff;
+    font-size: 18px;
+    border-radius:6px ;
+}
+
+input, button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
 .contact-container .row{
     display:flex;
     align-items: center;
